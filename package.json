@@ -1,0 +1,23 @@
+{
+  "name": "DoomScreepsStats",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "lint": "eslint \"src/**/*.ts\"",
+    "build": "tsc",
+    "test": "npm run test-unit",
+    "test-unit": "mocha test/unit/**/*.ts",
+    "watch-main": "rollup -cw"
+  },
+  "dependencies": {
+    "@types/graphite": "^0.1.2",
+    "graphite": "^0.1.5",
+    "screeps-api": "^1.16.1"
+  },
+  "type": "module"
+}
