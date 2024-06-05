@@ -1,7 +1,6 @@
 FROM node:latest
 LABEL authors="Kaiden"
 
-RUN npm install -g yarn
 RUN mkdir /app
 COPY ./package.json /app
 COPY ./yarn.lock /app
