@@ -1,9 +1,13 @@
 import {ScreepsAPI} from "screeps-api";
-import graphite from "graphite";
-import * as fs from "fs";
-import path from "node:path";
-const conf = JSON.parse(fs.readFileSync(path.join(path.dirname(process.argv[1]), '../screeps.json'), {encoding:"utf-8"}))
-
+import graphite from "graphite"
+const conf = {
+    "token": process.env.TOKEN,
+    "protocol": "https",
+    "hostname": "screeps.com",
+    "port": 443,
+    "path": "/",
+    "shards": ["shard3"]
+}
 const api = new ScreepsAPI(conf);
 (async function (){
     const client = graphite.createClient(process.env.GRAPHITE_URL as string)
